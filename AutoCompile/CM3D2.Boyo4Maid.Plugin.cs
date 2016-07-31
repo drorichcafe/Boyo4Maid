@@ -6,22 +6,28 @@ using UnityInjector.Attributes;
 
 namespace CM3D2.Boyo4Maid
 {
-	[PluginFilter("CM3D2x64"), PluginFilter("CM3D2x86"), PluginName("Boyo4Maid"), PluginVersion("0.0.0.0")]
+	[PluginFilter("CM3D2x64"), PluginFilter("CM3D2x86"), PluginName("Boyo4Maid"), PluginVersion("0.0.0.1")]
 	public class Boyo4Maid : PluginBase
 	{
 		public class Config
 		{
-			public class Joint
+			public class Maid
 			{
+				public class Joint
+				{
+					public string Name = string.Empty;
+					public Vector3 Offset = Vector3.zero;
+					public float Spring = 0.0f;
+					public float MaxDistance = 0.0f;
+					public float Damper = 0.01f;
+				}
+
 				public string Name = string.Empty;
-				public Vector3 Offset = Vector3.zero;
-				public float Spring = 0.0f;
-				public float MaxDistance = 0.0f;
-				public float Damper = 0.01f;
+				public List<Joint> Joints = new List<Joint>();
 			}
 
 			public KeyCode KeyApply = KeyCode.Space;
-			public List<Joint> Joints = new List<Joint>();
+			public List<Maid> Maids = new List<Maid>();
 		}
 
 		private static Config m_config = new Config();
@@ -51,21 +57,35 @@ namespace CM3D2.Boyo4Maid
 					GameObject.Destroy(cmp);
 				}
 
-				var gos = FindObjectsOfType<GameObject>();
-				foreach (var jnt in m_config.Joints)
+				for (int i = 0; i < GameMain.Instance.CharacterMgr.GetMaidCount() - 1; ++i)
 				{
-					foreach (var go in gos)
+					var md = GameMain.Instance.CharacterMgr.GetMaid(i);
+					if (md == null || md.gameObject == null) break;
+
+					foreach (var maid_config in m_config.Maids)
 					{
-						if (go.name == jnt.Name)
+						if (maid_config.Name != md.Param.status.last_name + md.Param.status.first_name) continue;
+						var gos = getMaidChildren(md.gameObject.transform);
+
+						foreach (var jnt in maid_config.Joints)
 						{
-							var parent = go.transform.parent;
-							var cmp = go.AddComponent<Boyo4>();
-							go.transform.position = parent.position;
-							cmp.goal = parent;
-							cmp.spring = jnt.Spring;
-							cmp.maxdistance = jnt.MaxDistance;
-							cmp.damper = jnt.Damper;
-							cmp.offset = jnt.Offset;
+							if (!gos.ContainsKey(jnt.Name))
+							{
+								Console.WriteLine(jnt.Name + " not found");
+								continue;
+							}
+
+							foreach (var go in gos[jnt.Name])
+							{
+								var parent = go.transform.parent;
+								var cmp = go.AddComponent<Boyo4>();
+								go.transform.position = parent.position;
+								cmp.goal = parent;
+								cmp.spring = jnt.Spring;
+								cmp.maxdistance = jnt.MaxDistance;
+								cmp.damper = jnt.Damper;
+								cmp.offset = jnt.Offset;
+							}
 						}
 					}
 				}
@@ -79,6 +99,40 @@ namespace CM3D2.Boyo4Maid
 			{
 				return (T)serializer.Deserialize(sr);
 			}
+		}
+
+		private List<Transform> getChildren(Transform parent)
+		{
+			List<Transform> ret = new List<Transform>();
+
+			foreach (Transform child in parent)
+			{
+				ret.Add(child);
+				ret.AddRange(getChildren(child));
+			}
+
+			return ret;
+		}
+
+		private Dictionary<string, List<GameObject>> getMaidChildren(Transform root)
+		{
+			var ret = new Dictionary<string, List<GameObject>>();
+
+			foreach (var tr in getChildren(root))
+			{
+				var go = tr.gameObject;
+				if (go != null)
+				{
+					if (!ret.ContainsKey(go.name))
+					{
+						ret.Add(go.name, new List<GameObject>());
+					}
+
+					ret[go.name].Add(go);
+				}
+			}
+
+			return ret;
 		}
 	}
 

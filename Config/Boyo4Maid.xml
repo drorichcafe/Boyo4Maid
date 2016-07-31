@@ -1,38 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <KeyApply>Space</KeyApply>
-  <Joints>
-    <Joint><Name>Bip01 Head</Name><Offset><x>-0.075</x><y>0</y><z>0</z></Offset><MaxDistance>0.005</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Neck</Name><Offset><x>-0.175</x><y>0</y><z>0</z></Offset><MaxDistance>0.005</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Spine1</Name><Offset><x>-0.1</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Spine1a</Name><Offset><x>-0.1</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Spine0</Name><Offset><x>-0.1</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Spine0a</Name><Offset><x>-0.05</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Spine</Name><Offset><x>0</x><y>0</y><z>0.15</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Pelvis</Name><Offset><x>0</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 L Clavicle</Name><Offset><x>-0.11</x><y>0</y><z>+0.03</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>2</Damper></Joint>
-    <Joint><Name>Bip01 R Clavicle</Name><Offset><x>-0.11</x><y>0</y><z>-0.03</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>2</Damper></Joint>
-    <Joint><Name>Bip01 L UpperArm</Name><Offset><x>-0.1</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 R UpperArm</Name><Offset><x>-0.1</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 L Forearm</Name><Offset><x>-0.225</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 R Forearm</Name><Offset><x>-0.225</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 L Hand</Name><Offset><x>-0.225</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 R Hand</Name><Offset><x>-0.225</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Mune_L</Name><Offset><x>-0.05</x><y>0.05</y><z>0.05</z></Offset><MaxDistance>0.02</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Mune_R</Name><Offset><x>-0.05</x><y>0.05</y><z>-0.05</z></Offset><MaxDistance>0.02</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 L Thigh</Name><Offset><x>0</x><y>0</y><z>0.1</z></Offset><MaxDistance>0.04</MaxDistance><Spring>200</Spring><Damper>0.1</Damper></Joint>
-    <Joint><Name>Bip01 R Thigh</Name><Offset><x>0</x><y>0</y><z>-0.1</z></Offset><MaxDistance>0.04</MaxDistance><Spring>200</Spring><Damper>0.1</Damper></Joint>
-    <Joint><Name>Bip01 L Calf</Name><Offset><x>-0.4</x><y>0</y><z>0</z></Offset><MaxDistance>0.01</MaxDistance><Spring>200</Spring><Damper>0.1</Damper></Joint>
-    <Joint><Name>Bip01 R Calf</Name><Offset><x>-0.4</x><y>0</y><z>0</z></Offset><MaxDistance>0.01</MaxDistance><Spring>200</Spring><Damper>0.1</Damper></Joint>
-    <Joint><Name>Bip01 L Foot</Name><Offset><x>-0.375</x><y>0.0</y><z>0</z></Offset><MaxDistance>0.01</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 R Foot</Name><Offset><x>-0.375</x><y>0.0</y><z>0</z></Offset><MaxDistance>0.01</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Spine1_SCL_</Name><Offset><x>0.0</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Spine0a_SCL_</Name><Offset><x>0.0</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Spine_SCL_</Name><Offset><x>0.0</x><y>0</y><z>0</z></Offset><MaxDistance>0.05</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>Bip01 Pelvis_SCL_</Name><Offset><x>0.0</x><y>0</y><z>0</z></Offset><MaxDistance>0.05</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
-    <Joint><Name>momoniku_L</Name><Offset><x>0</x><y>-0.03</y><z>0</z></Offset><MaxDistance>0.05</MaxDistance><Spring>300</Spring><Damper>0.1</Damper></Joint>
-    <Joint><Name>momoniku_R</Name><Offset><x>0</x><y>0.03</y><z>0</z></Offset><MaxDistance>0.05</MaxDistance><Spring>300</Spring><Damper>0.1</Damper></Joint>
-    <Joint><Name>Hip_L</Name><Offset><x>0</x><y>0.0</y><z>+0.08</z></Offset><MaxDistance>0.05</MaxDistance><Spring>300</Spring><Damper>0.1</Damper></Joint>
-    <Joint><Name>Hip_R</Name><Offset><x>0</x><y>0.0</y><z>-0.08</z></Offset><MaxDistance>0.05</MaxDistance><Spring>300</Spring><Damper>0.1</Damper></Joint>
-  </Joints>
+  <Maids>
+    <Maid><!-- 複数記述可能 -->
+      <Name>土屋よし子</Name><!-- 姓＋名でぼよよんさせるメイドを指定 -->
+      <Joints>
+        <Joint>
+          <Name>Bip01 Head</Name><!-- ぼよよんさせるジョイント名 -->
+          <Offset><!-- ジョイントの初期位置オフセット -->
+            <x>-0.075</x>
+            <y>0</y>
+            <z>0</z>
+          </Offset>
+          <MaxDistance>0.005</MaxDistance><!-- ジョイントの移動範囲制限 -->
+          <Spring>200</Spring><!-- ばねの強さ -->
+          <Damper>1</Damper><!-- ばねの減衰 -->
+        </Joint>
+        <Joint><Name>Bip01 Neck</Name><Offset><x>-0.175</x><y>0</y><z>0</z></Offset><MaxDistance>0.005</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 Spine1</Name><Offset><x>-0.1</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 Spine1a</Name><Offset><x>-0.1</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 Spine0a</Name><Offset><x>-0.05</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 Spine</Name><Offset><x>0</x><y>0</y><z>0.15</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 Pelvis</Name><Offset><x>0</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 L Clavicle</Name><Offset><x>-0.11</x><y>0</y><z>+0.03</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>2</Damper></Joint>
+        <Joint><Name>Bip01 R Clavicle</Name><Offset><x>-0.11</x><y>0</y><z>-0.03</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>2</Damper></Joint>
+        <Joint><Name>Bip01 L UpperArm</Name><Offset><x>-0.1</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 R UpperArm</Name><Offset><x>-0.1</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 L Forearm</Name><Offset><x>-0.225</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 R Forearm</Name><Offset><x>-0.225</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 L Hand</Name><Offset><x>-0.225</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 R Hand</Name><Offset><x>-0.225</x><y>0</y><z>0</z></Offset><MaxDistance>0.0</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Mune_L</Name><Offset><x>-0.05</x><y>0.05</y><z>0.05</z></Offset><MaxDistance>0.02</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Mune_R</Name><Offset><x>-0.05</x><y>0.05</y><z>-0.05</z></Offset><MaxDistance>0.02</MaxDistance><Spring>300</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 L Thigh</Name><Offset><x>0</x><y>0</y><z>0.1</z></Offset><MaxDistance>0.04</MaxDistance><Spring>200</Spring><Damper>0.1</Damper></Joint>
+        <Joint><Name>Bip01 R Thigh</Name><Offset><x>0</x><y>0</y><z>-0.1</z></Offset><MaxDistance>0.04</MaxDistance><Spring>200</Spring><Damper>0.1</Damper></Joint>
+        <Joint><Name>Bip01 L Calf</Name><Offset><x>-0.4</x><y>0</y><z>0</z></Offset><MaxDistance>0.01</MaxDistance><Spring>200</Spring><Damper>0.1</Damper></Joint>
+        <Joint><Name>Bip01 R Calf</Name><Offset><x>-0.4</x><y>0</y><z>0</z></Offset><MaxDistance>0.01</MaxDistance><Spring>200</Spring><Damper>0.1</Damper></Joint>
+        <Joint><Name>Bip01 L Foot</Name><Offset><x>-0.375</x><y>0.0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 R Foot</Name><Offset><x>-0.375</x><y>0.0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 Spine1_SCL_</Name><Offset><x>0.0</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 Spine0a_SCL_</Name><Offset><x>0.0</x><y>0</y><z>0</z></Offset><MaxDistance>0.02</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 Spine_SCL_</Name><Offset><x>0.0</x><y>0</y><z>0</z></Offset><MaxDistance>0.05</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>Bip01 Pelvis_SCL_</Name><Offset><x>0.0</x><y>0</y><z>0</z></Offset><MaxDistance>0.05</MaxDistance><Spring>200</Spring><Damper>1</Damper></Joint>
+        <Joint><Name>momoniku_L</Name><Offset><x>0</x><y>-0.03</y><z>0</z></Offset><MaxDistance>0.05</MaxDistance><Spring>300</Spring><Damper>0.1</Damper></Joint>
+        <Joint><Name>momoniku_R</Name><Offset><x>0</x><y>0.03</y><z>0</z></Offset><MaxDistance>0.05</MaxDistance><Spring>300</Spring><Damper>0.1</Damper></Joint>
+        <Joint><Name>Hip_L</Name><Offset><x>0</x><y>0.0</y><z>+0.08</z></Offset><MaxDistance>0.05</MaxDistance><Spring>300</Spring><Damper>0.1</Damper></Joint>
+        <Joint><Name>Hip_R</Name><Offset><x>0</x><y>0.0</y><z>-0.08</z></Offset><MaxDistance>0.05</MaxDistance><Spring>300</Spring><Damper>0.1</Damper></Joint>
+      </Joints>
+    </Maid>
+  </Maids>
 </Config>
